@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Adsum">
+  <!--
+    Adsum-Logo (Entwurf C) – die EINZIGE Quelle. Alle anderen Logo-Dateien werden beim Bauen daraus
+    erzeugt (make logo, siehe branding/README.md). Hier ändern, nirgends sonst.
+    Für das Rastern der Desktop-Icons (oksvg) nur path und linearGradient (Einheiten relativ zur Form).
+    Kachel: Teal-Verlauf, weißes „A“, die Querlinie ist ein Häkchen in Amber („adsum“ = anwesend).
+  -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d8a89"/>
+      <stop offset="1" stop-color="#05585d"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#tile)" d="M14 0 H50 C57.73 0 64 6.27 64 14 V50 C64 57.73 57.73 64 50 64 H14 C6.27 64 0 57.73 0 50 V14 C0 6.27 6.27 0 14 0 Z"/>
+  <path fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="M17 51 L32 13 L47 51"/>
+  <path fill="none" stroke="#f5a524" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" d="M21 37 L28.5 44 L44 29"/>
+</svg>

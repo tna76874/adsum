@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "product": "Adsum",
+  "version": "0.1.15",
+  "schemaVersion": 16,
+  "licenseFormat": 2,
+  "releaseDate": "2026-11-28",
+  "commit": "5479271",
+  "files": [
+    {
+      "kind": "desktop",
+      "os": "linux",
+      "arch": "amd64",
+      "path": "builds/adsum-linux-amd64",
+      "size": 47556064,
+      "sha256": "24d69f823f4b211c3ae75b9e7f259508b571544533b276f2960c1a8f7e15ddf6"
+    },
+    {
+      "kind": "server",
+      "os": "linux",
+      "arch": "amd64",
+      "path": "builds/adsum-server-linux-amd64",
+      "size": 60367008,
+      "sha256": "4f1d15cc00286cb3aa0313e844f7724db4108f8f6b84331c9a610a3c33bdc2b6"
+    },
+    {
+      "kind": "server",
+      "os": "linux",
+      "arch": "arm64",
+      "path": "builds/adsum-server-linux-arm64",
+      "size": 58458272,
+      "sha256": "6d170c9739153b42a57474561262ace53cd30a1e9ac578a3222b8a4fb671438c"
+    },
+    {
+      "kind": "desktop",
+      "os": "windows",
+      "arch": "amd64",
+      "path": "builds/adsum-windows-amd64.exe",
+      "size": 48302592,
+      "sha256": "fb84aabd7c9eec7fd67d4dcd03d21dfd9da09b4ba1d9898acc0cea6fec0fe70f"
+    },
+    {
+      "kind": "server",
+      "os": "windows",
+      "arch": "amd64",
+      "path": "builds/adsum-server-windows-amd64.exe",
+      "size": 60606464,
+      "sha256": "a2fc796954aac0d00c2a4b5243901ae4e420047e6b412bec6f4da716215d629f"
+    },
+    {
+      "kind": "desktop",
+      "os": "windows",
+      "arch": "arm64",
+      "path": "builds/adsum-windows-arm64.exe",
+      "size": 45908992,
+      "sha256": "b0646fd8e0c960be88bc26c18baf2f38d63e8832c4dca5a7895758365be84df2"
+    },
+    {
+      "kind": "server",
+      "os": "windows",
+      "arch": "arm64",
+      "path": "builds/adsum-server-windows-arm64.exe",
+      "size": 58416128,
+      "sha256": "df1a78672a7fc1e8107271433b414cc0f31f483870950ccb3e0fa757956e823e"
+    },
+    {
+      "kind": "server",
+      "os": "darwin",
+      "arch": "amd64",
+      "path": "builds/adsum-server-darwin-amd64",
+      "size": 60526848,
+      "sha256": "f37209c86c5b15b0c89fd69739fa515ba54b01b0635a3ba1a68d373e08133ff9"
+    },
+    {
+      "kind": "server",
+      "os": "darwin",
+      "arch": "arm64",
+      "path": "builds/adsum-server-darwin-arm64",
+      "size": 59067410,
+      "sha256": "bb6eccf0bb2a40f8a960b0e02c4b1a452c49ebc5e9457cb5eca18c33d67794f2"
+    }
+  ]
+}

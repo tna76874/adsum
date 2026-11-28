@@ -1,0 +1,27 @@
+# Adsum als Container:
+#
+#   mkdir -p data
+#   ADSUM_UID=$(id -u) ADSUM_GID=$(id -g) docker compose up -d      →  http://localhost:8080
+#
+# Alle Daten (Datenbank, Sicherungen, eingespielte Aktualisierungen, optional license.lic und
+# config.json) liegen im lokalen Verzeichnis ./data neben dieser Datei – es wird direkt eingebunden
+# (Bind-Mount, kein Docker-Volume) und lässt sich wie jedes Verzeichnis sichern.
+# Der Container läuft mit der Benutzer-ID, der ./data gehört (Standard 1000:1000); dauerhaft
+# festlegen lässt sie sich in einer Datei .env:  ADSUM_UID=1000  ADSUM_GID=1000
+services:
+  adsum:
+    image: ghcr.io/tna76874/adsum:latest
+    restart: unless-stopped
+    user: "${ADSUM_UID:-1000}:${ADSUM_GID:-1000}"
+    ports:
+      - "127.0.0.1:8080:8080"   # nur lokal; für das Schulnetz einen Reverse-Proxy mit TLS davorsetzen
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data
+    # PostgreSQL statt SQLite: POSTGRES.md   Zero-Trust-Betrieb: ZERO-TRUST.md   alle Optionen: SERVER.md
+    # command: ["-db", "postgres://adsum:${ADSUM_PG_PASSWORD}@postgres:5432/adsum"]
+    # environment:
+    #   ADSUM_LICENSE_FILE: /data/license.lic
+    #   # Anmeldung über OpenID Connect: ./data/config.json und Client-Secret, siehe OIDC.md
+    #   ADSUM_OIDC_CLIENT_SECRET: ${ADSUM_OIDC_CLIENT_SECRET}
